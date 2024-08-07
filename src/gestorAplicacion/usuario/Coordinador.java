@@ -29,10 +29,10 @@ public class Coordinador extends Usuario implements Serializable{
             return "El estudiante no estaba matriculado";
         }
     }
-    	//Primero se recorren los grupos asociados a la materia, a cada grupo se le obtiene
-    	// su profesor,luego se llama al metodo desvincularGrupo, liberando asi al profesor de dicho grupo
-    	// finalmente en el proximo for se recorre cada estudiante perteneciente al grupo en cuestion
-    	// desmatriculando asi uno por uno
+    	/**Primero se recorren los grupos asociados a la materia, a cada grupo se le obtiene
+    	 su profesor,luego se llama al metodo desvincularGrupo, liberando asi al profesor de dicho grupo
+    	finalmente en el proximo for se recorre cada estudiante perteneciente al grupo en cuestion
+    	 desmatriculando asi uno por uno*/
     public void resturarMateria(Materia materia){
     	
         for (int i=0;i<materia.getGrupos().size();i++){
