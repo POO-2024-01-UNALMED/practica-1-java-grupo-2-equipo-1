@@ -15,10 +15,10 @@ public class Coordinador extends Usuario implements Serializable{
         super.setTipo("Coordinador");
         Coordinador.coordinadoresTotales.add(this);
     }
-
+    
+    /**El coordinador tiene la facultad de eliminar un estudiante de un grupo, esto lo hara accediendo 
+     al metoto "existenciaEstudiante" y "eliminarEstudiante"*/
     public String desmatricular(Estudiante estudiante, Grupo grupo){
-        //El coordinador tiene la facultad de eliminar un estudiante de un grupo, esto lo hara accediendo 
-    	//al metoto "existenciaEstudiante" y "eliminarEstudiante"
         boolean estaMatriculado = grupo.existenciaEstudiante(estudiante);
 
         if (estaMatriculado){
@@ -29,8 +29,6 @@ public class Coordinador extends Usuario implements Serializable{
             return "El estudiante no estaba matriculado";
         }
     }
-
-    
     	//Primero se recorren los grupos asociados a la materia, a cada grupo se le obtiene
     	// su profesor,luego se llama al metodo desvincularGrupo, liberando asi al profesor de dicho grupo
     	// finalmente en el proximo for se recorre cada estudiante perteneciente al grupo en cuestion
