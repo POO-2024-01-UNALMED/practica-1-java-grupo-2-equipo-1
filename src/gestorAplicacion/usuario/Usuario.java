@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 import gestorAplicacion.administracion.Materia;
 
-
+//clase abstracta que implementa serializable para guardar los objetos creados en posteriores clases
 public abstract class Usuario implements Serializable{
     private static final long serialVersionUID = 1L;
     protected long id;
