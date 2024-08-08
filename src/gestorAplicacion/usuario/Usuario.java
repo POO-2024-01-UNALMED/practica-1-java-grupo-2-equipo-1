@@ -14,7 +14,8 @@ public abstract class Usuario implements Serializable{
     protected String pw;
     protected String facultad;
     protected static ArrayList<Usuario> usuariosTotales = new ArrayList<Usuario>();
-
+   
+    //constructores
     public Usuario(long id, String nombre, String facultad) {
         this.id = id;
         this.nombre = nombre;
@@ -29,7 +30,7 @@ public abstract class Usuario implements Serializable{
         this.facultad = facultad;
         usuariosTotales.add(this);
     }
-
+    // metodo abstracto que sera usado en las clases que hereden de usuario
     public abstract String toString();
 
     public static String mostrarUsuarios() {
@@ -60,7 +61,7 @@ public abstract class Usuario implements Serializable{
                 }
         }
     }
-
+    //metodos para eliminar y agregar materias nuevas
     public void eliminarMateria(Materia materia){
     	Materia.getMateriasTotales().remove(materia);
     }
