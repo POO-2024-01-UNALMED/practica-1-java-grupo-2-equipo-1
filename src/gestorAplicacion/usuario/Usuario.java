@@ -70,6 +70,8 @@ public abstract class Usuario implements Serializable{
     	Materia.getMateriasTotales().add(nMateria);
     }
 
+    
+    // getters y setters
     public String getTipo() {
 		return tipo;
 	}
