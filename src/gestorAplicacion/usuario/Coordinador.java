@@ -1,3 +1,4 @@
+//Juan Diego / Daniel Hernando Zambrano Gonzales/ David Posada / Juan Miguel Ochoa Agudelo
 package gestorAplicacion.usuario;
 
 import java.util.ArrayList;
