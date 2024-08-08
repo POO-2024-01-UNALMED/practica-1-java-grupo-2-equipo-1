@@ -29,10 +29,10 @@ public class Coordinador extends Usuario implements Serializable{
             return "El estudiante no estaba matriculado";
         }
     }
-    	/**Primero se recorren los grupos asociados a la materia, a cada grupo se le obtiene
-    	 su profesor,luego se llama al metodo desvincularGrupo, liberando asi al profesor de dicho grupo
-    	finalmente en el proximo for se recorre cada estudiante perteneciente al grupo en cuestion
-    	 desmatriculando asi uno por uno*/
+    /**Primero se recorren los grupos asociados a la materia, a cada grupo se le obtiene
+     su profesor,luego se llama al metodo desvincularGrupo, liberando asi al profesor de dicho grupo
+    finalmente en el proximo for se recorre cada estudiante perteneciente al grupo en cuestion
+     desmatriculando asi uno por uno*/
     public void resturarMateria(Materia materia){
     	
         for (int i=0;i<materia.getGrupos().size();i++){
@@ -77,7 +77,7 @@ public class Coordinador extends Usuario implements Serializable{
     /**
     -Toma una lista de materias que se desean ver. 
     -Crear un horario aleatorio en base de los grupos disponibles.
-    -Retorna una lista estatica de dos elementos: Un booleano que nos dira si fue posible o no
+    -Retorna una lista estatica de tres elementos: Un booleano que nos dira si fue posible o no
     -crear el horaio, el horario generado y la materia que no permitio crear el horario en caso de existir.
     */
     public static Object[] crearHorario(ArrayList<Materia> materias){
@@ -145,9 +145,9 @@ public class Coordinador extends Usuario implements Serializable{
 
     
     
-    /*Metodo eliminarMateria: Recibira una materia y rectificara see encuentre en la base de datos quiere eliminar de la base de datos
-    sí se encuentre en esta, y además eliminarla correctamente de las materias de los estudiantes 
-    que la tienen inscrita y de los profesores relacionados a esta*/
+    /*Metodo eliminarMateria: Recibira una materia y rectificara si la encuentre en la base de datos, posteriormente
+     ejecuta el codigo dentro del if, donde remueve la materia y finaliza usando el metodo definido anteriomnrte
+     "resturarmateria"*/
 
     public void eliminarMateria(Materia materia){
         if(Materia.getMateriasTotales().contains(materia)){
