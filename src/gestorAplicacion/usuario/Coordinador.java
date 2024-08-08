@@ -80,7 +80,6 @@ public class Coordinador extends Usuario implements Serializable{
     -Retorna una lista estatica de dos elementos: Un booleano que nos dira si fue posible o no
     -crear el horaio, el horario generado y la materia que no permitio crear el horario en caso de existir.
     */
-
     public static Object[] crearHorario(ArrayList<Materia> materias){
         Object[] resultado = new Object[3];
         Horario horario =  new Horario();
