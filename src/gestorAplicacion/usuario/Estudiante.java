@@ -39,13 +39,13 @@ public class Estudiante extends Usuario implements Serializable{
         this.horario = new Horario();
         Estudiante.estudiantes.add(this);
     }
-
+    //Usamos el constructor anterior con los aspectos basicos y asignamos materias vistas o grupos
     public Estudiante(long id, String nombre, String programa, int semestre, String facultad, int estrato, int sueldo, ArrayList<Materia> materias, ArrayList<Grupo> gruposVistos) {
         this(id,nombre,programa,semestre,facultad, estrato, sueldo);
         this.materias = materias;
         this.gruposVistos = gruposVistos;
     }
-
+    //metodo heredado de la clase abstracta
     public String toString(){
         return "Nombre: "+ getNombre()+ " Documento: "+ getId();
     }
