@@ -157,8 +157,8 @@ public class Estudiante extends Usuario implements Serializable{
         this.setMaterias(new ArrayList<Materia>());
         for (Grupo grupoE: this.grupos){
             Grupo grupo = Grupo.buscarGrupo(grupoE.getMateria(), grupoE);
-            grupo.getMateria().setCupos(grupo.getMateria().getCupos()+1);
-            this.setCreditos(this.getCreditos()-grupo.getMateria().getCreditos());
+            grupo.getMateria().setCupos(grupo.getMateria().getCupos()+1);   // Aumentamos el cupo ya que estamos retirando al estudiante
+            this.setCreditos(this.getCreditos()-grupo.getMateria().getCreditos()); //Restamos los creditos de la materia al numero de creditos del estudiante
             gruposEliminar.add(grupo);
         }
         int num = gruposEliminar.size();
@@ -167,7 +167,8 @@ public class Estudiante extends Usuario implements Serializable{
         }
         
     }
-
+    
+    //GETTERS Y SETTERS
     public String getPrograma() {
         return programa;
     }
