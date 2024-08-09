@@ -23,7 +23,9 @@ public class Estudiante extends Usuario implements Serializable{
     private Beca beca;
     private ArrayList<Double> notas = new ArrayList<Double>();
     private ArrayList<Grupo> gruposVistos = new ArrayList<Grupo>();
-
+     
+    // constructor basico, inicializa y deja varias variables por defecto
+    
     public Estudiante(long id, String nombre, String programa, int semestre, String facultad, int estrato, int sueldo) {
         super(id,nombre,facultad);
         super.setTipo("Estudiante");
