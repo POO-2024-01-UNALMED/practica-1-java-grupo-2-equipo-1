@@ -72,7 +72,7 @@ public class Estudiante extends Usuario implements Serializable{
         }
         return -1;
     }
-
+    //Eliminar grupo y materia del estudiante
     public void eliminarMateria(Materia materia){
         this.materias.remove(materia);
         this.creditos -= materia.getCreditos();
