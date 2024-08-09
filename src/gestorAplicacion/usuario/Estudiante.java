@@ -128,7 +128,7 @@ public class Estudiante extends Usuario implements Serializable{
         }
         return estudiantes.substring(1, estudiantes.length());
     }
-
+    //busqueda
     public Materia buscarMateriaPorNombre(String nombre){
         
         for (Materia materia : this.materias){
