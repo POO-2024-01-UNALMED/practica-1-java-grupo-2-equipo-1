@@ -104,7 +104,7 @@ public class Estudiante extends Usuario implements Serializable{
         promedio = promedio / ((double) this.notas.size());
         this.promedio = promedio;
     }
-
+    // metodo para calcular el avance
     public void calcularAvance(){
         double creditosVistos = 0;
 
