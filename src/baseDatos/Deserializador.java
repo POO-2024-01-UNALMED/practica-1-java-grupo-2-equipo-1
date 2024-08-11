@@ -28,14 +28,14 @@ public class Deserializador {
         try {
 
             File path = new File(archivo.getAbsolutePath()+"/src/baseDatos/temp/"+nombre+".txt");
-          
+            //creamos un archivo con la ruta de acceso completa
             fis = new FileInputStream(path);
             ois = new ObjectInputStream(fis);
             lista.addAll((ArrayList<T>) ois.readObject());
             ois.close();
             fis.close();
 
-        } catch (FileNotFoundException e) {
+        } catch (FileNotFoundException e) { 
 			e.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();
