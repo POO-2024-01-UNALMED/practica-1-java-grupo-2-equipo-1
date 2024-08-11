@@ -35,7 +35,7 @@ public class Deserializador {
             ois.close();
             fis.close();
 
-        } catch (FileNotFoundException e) { //
+        } catch (FileNotFoundException e) { //EXCEPSIONES O 
 			e.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();
