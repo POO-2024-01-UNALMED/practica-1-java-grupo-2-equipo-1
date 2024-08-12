@@ -28,6 +28,8 @@ public class Serializador {
             o.close();
             f.close();
         }
+        
+        //Catch que nos ayudara a encontrar mas rapido un posible error//
         catch(FileNotFoundException e){
             System.out.println("No se encuentra el archivo");
         }
@@ -35,7 +37,7 @@ public class Serializador {
             System.out.println("Error Flujo de inicializacion");
         }
         // catch(ClassNotFoundException e){
-        //     e.printStackTrace();
+          //   e.printStackTrace();
         // }
     }
 
