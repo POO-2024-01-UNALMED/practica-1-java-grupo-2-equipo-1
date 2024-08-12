@@ -2,6 +2,10 @@ package gestorAplicacion.administracion;
 import java.io.Serializable;
 import java.util.ArrayList;
 
+//* La clase Horario proporciona una estructura para gestionar horarios semanales, permitiendo asignar grupos a períodos específicos, 
+liberar esos períodos, comprobar la disponibilidad y mostrar el horario en un formato legible, también mantiene una lista de todos 
+los horarios creados y ofrece métodos para gestionar la disponibilidad y el contenido del horario//
+
 public class Horario implements Serializable{
     private Grupo[][] horario = new Grupo[7][24];
     private ArrayList<Grupo> grupoContenidos = new ArrayList<Grupo>();
@@ -78,7 +82,7 @@ public class Horario implements Serializable{
     }
     
     public void liberarHorario(ArrayList<String> horario) {
-        
+        // Libera los períodos de tiempo en el horario para los períodos especificados en la lista horario, y elimina el grupo de la lista grupoContenidos//
 
         for (int i = 0;i<horario.size();i++){
             
@@ -105,6 +109,7 @@ public class Horario implements Serializable{
     }
     
     public boolean comprobarDisponibilidad(String clase){
+        // Verifica si un período de tiempo especificado en la cadena clase está disponible.//
 
         int dia = Integer.parseInt(clase.substring(0, 1))-1;
         int horaInicio = Integer.parseInt(clase.substring(2, 4));
@@ -121,9 +126,9 @@ public class Horario implements Serializable{
 
 
     public boolean comprobarDisponibilidad(ArrayList<String> clases){
-        /*
-         * Comprobamos la disponibilidad de un conjunto de clases de un grupo
-         */
+        //
+         * Comprobamos la disponibilidad de multiples de clases de un grupo
+         //
         boolean ok = true;
 
         for (String i:clases){
