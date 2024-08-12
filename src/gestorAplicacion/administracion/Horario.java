@@ -79,6 +79,7 @@ public class Horario implements Serializable{
     
     public void liberarHorario(ArrayList<String> horario) {
         
+
         for (int i = 0;i<horario.size();i++){
             
             String clase = horario.get(i);
