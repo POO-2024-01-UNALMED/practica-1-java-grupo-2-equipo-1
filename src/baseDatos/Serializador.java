@@ -14,7 +14,8 @@ import gestorAplicacion.usuario.*;
 public class Serializador {
 
     private static void serializar(ArrayList<? extends Object> lista, String nombre) {
-    
+    	/* puede recibir una lista de objetos heredados de object, osea CUALQUIER OBJETO
+    	  ASI AHORRAMOS HACER UN CAST Y ESPECIFICAR EL TIPO*/
         File archivo = new File("");
 
         try{
