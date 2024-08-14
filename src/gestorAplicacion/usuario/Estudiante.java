@@ -122,7 +122,8 @@ public class Estudiante extends Usuario implements Serializable{
         this.notas.add(nota);
         this.calcularPromedio();
     }
-
+    
+    //METODO DE CLASE
     public static String mostrarEstudiantes(){
         String estudiantes = "";
         int i = 1;
