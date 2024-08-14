@@ -125,8 +125,7 @@ public class Horario implements Serializable{
 
 
     public boolean comprobarDisponibilidad(ArrayList<String> clases){
-        //
-         * Comprobamos la disponibilidad de multiples de clases de un grupo
+        //Comprobamos la disponibilidad de multiples de clases de un grupo
          //
         boolean ok = true;
 
