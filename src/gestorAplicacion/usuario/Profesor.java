@@ -13,7 +13,7 @@ public class Profesor implements Serializable{
     private static ArrayList<Profesor> profesores =new ArrayList<Profesor>();
     private static final long serialVersionUID = 1L;
     
-    /* En esta parte del codigo (de linea 17 a 40) se genera una sobrecarga de metodos, en los cuales se toma
+    /* En esta parte del codigo (de linea 17 a 40) se genera una sobrecarga de constructores, en los cuales se toma
     el metodo que cumpla con la estructura correspondiente */
     public Profesor(String nombre, String facultad, Horario horario, ArrayList<Materia> materiasDadas, ArrayList<Grupo> grupos){
         this.nombre = nombre;

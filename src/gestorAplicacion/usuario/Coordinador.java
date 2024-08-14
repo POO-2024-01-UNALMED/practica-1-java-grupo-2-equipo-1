@@ -54,6 +54,7 @@ public class Coordinador extends Usuario implements Serializable{
     finalmente en el ultimo for recorremos la lista de usuario y comprobamos uno por uno si esos usuarios son instancias
     de estudiantes, esto a traves del "instanceof"
     */
+    //ligadura dinamica
     public void desmatricularDelSistema(Usuario estudiante){
         Estudiante e1 = null;
         for (Estudiante e: Estudiante.getEstudiantes()){

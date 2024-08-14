@@ -59,7 +59,7 @@ public class Estudiante extends Usuario implements Serializable{
     	}
     	return retorno;
     }
-
+    //METODO DE CLASE
     public static int buscarEstudiante(String nombre, long id){
         /*
          * Si existe el estudiante retorna su indice en el Arraylist estudiante
@@ -105,6 +105,8 @@ public class Estudiante extends Usuario implements Serializable{
         promedio = promedio / ((double) this.notas.size());
         this.promedio = promedio;
     }
+    
+    
     // metodo para calcular el avance
     public void calcularAvance(){
         double creditosVistos = 0;

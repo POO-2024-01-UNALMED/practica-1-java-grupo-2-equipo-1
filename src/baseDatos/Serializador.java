@@ -20,7 +20,7 @@ public class Serializador {
 
         try{
             File path = new File(archivo.getAbsolutePath()+"/src/baseDatos/temp/"+nombre+".txt"); 
-            
+            // Obtenemos la ruta absoluta del archivo a deserializar
             FileOutputStream f = new FileOutputStream(path);
             ObjectOutputStream o = new ObjectOutputStream(f);
             

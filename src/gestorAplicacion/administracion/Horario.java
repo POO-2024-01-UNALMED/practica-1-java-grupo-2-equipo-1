@@ -61,8 +61,7 @@ public class Horario implements Serializable{
 
     public void ocuparHorario(Grupo grupo) {
 
-        //
-         * Metodo que solo necesita del grupo para agregarlo al horario correspondiente
+        //Metodo que solo necesita del grupo para agregarlo al horario correspondiente
          //
 
         grupoContenidos.add(grupo);
