@@ -1,4 +1,4 @@
-//Juan Diego / Daniel Hernando Zambrano Gonzales/ David Posada / Juan Miguel Ochoa Agudelo
+//Juan Diego Sanchez / Daniel Hernando Zambrano Gonzales/ David Posada / Juan Miguel Ochoa Agudelo
 package baseDatos;
 
 import java.io.File;
