@@ -34,11 +34,10 @@ public class Salon implements Serializable{
         public void setLugar(String lugar) {
                 this.lugar = lugar;
         }
-
         public int getAforo() {
                 return aforo;
         }
-
+        
         public void setAforo(int aforo) {
                 this.aforo = aforo;
         }
