@@ -7,7 +7,7 @@ import gestorAplicacion.usuario.*;
 import java.util.Random;
 
 public interface Interfaz {
-    @
+    
     // METODOS USADOS EN GENERAR HORARIO: 
     public static ArrayList<Materia> mostrarMateriasConFiltro(int opcionFiltro,String filtro){
         /*
