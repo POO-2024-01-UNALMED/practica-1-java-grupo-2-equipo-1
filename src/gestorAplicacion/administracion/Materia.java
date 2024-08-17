@@ -1,4 +1,4 @@
-//Juan Diego Sanchez / Daniel Hernando Zambrano Gonzales/ David Posada / Juan Miguel Ochoa Agudelo
+//Juan Diego Sanchez / Daniel Hernando Zambrano Gonzales/ David Posada Salazar/ Juan Miguel Ochoa Agudelo/ Sebastian Martinez Sequeira
 package gestorAplicacion.administracion;
 import java.util.ArrayList;
 import gestorAplicacion.usuario.*;
@@ -88,7 +88,7 @@ public class Materia implements Serializable{
             return false;
         }
     }
-    /* */
+    /* Metodos utilizados para eliminar y agregar un grupo paso por paso*/
     public void eliminarGrupo(int numero){
     	Grupo grupo = this.grupos.get(numero-1);
     	grupo.getProfesor().desvincularGrupo(grupo);
@@ -104,12 +104,14 @@ public class Materia implements Serializable{
     }
     
     public void agregarGrupo(int numero, Profesor profesor, ArrayList<String> horario, int cupos, Salon salon) {
-    	//el metodo recibe los parametros necesarios para crear un nuevo grupo
+    	/*el metodo recibe los parametros necesarios para crear un nuevo grupo*/
     	boolean dispSalon = true;
     	boolean dispProfesor = true;
     	boolean daMateria = profesor.daMateria(this.nombre);
     	
-    	//Se comprueba la disponibilidad del profesor y el salon para el horario ingresado
+    	/*Se comprueba la disponibilidad del profesor y el salon para el horario ingresado, si almenos uno
+    	no se cumple, no se agrega el grupo*/
+    	
     	for(String hor:horario) {
     		dispProfesor = profesor.getHorario().comprobarDisponibilidad(hor);
     		dispSalon = salon.getHorario().comprobarDisponibilidad(hor);
@@ -120,7 +122,7 @@ public class Materia implements Serializable{
     	}
     	
 
-    	//En caso de contar con disponibilidad, se procede a declarar el nuevo grupo y agregarselo a su respectiva meteria, profesor y salon
+    	/*En caso de contar con disponibilidad, se procede a declarar el nuevo grupo y agregarselo a su respectiva meteria, profesor y salon*/
     	if(dispProfesor&&dispSalon&&daMateria) {
     		Grupo nGrupo = crearGrupo(numero,profesor,horario,cupos,salon);
     		this.cupos += cupos;
@@ -128,6 +130,7 @@ public class Materia implements Serializable{
     		profesor.vincularGrupo(nGrupo);
     	}
     }
+    /*Metodo que retorna el grupo de un estudiante en especifico*/
 
     public Grupo buscarGrupoDeEstudiante(Estudiante estudiante){
 
@@ -140,12 +143,12 @@ public class Materia implements Serializable{
         }
         return null;
     }
-
+    
+     /* Busca una materia, teniendo en cuenta su nombre y su codigo.
+      Si no existe, retorna -1 */
     public static int buscarMateria(String nombre, int codigo){
-        /*
-         * Si existe el estudiante retorna su indice en el Arraylist materiaTotales
-         * Si no existe, retorna -1
-         */
+        
+        
         for (int i = 0; i < materiasTotales.size(); i++){
             if (materiasTotales.get(i).getNombre().equals(nombre) && materiasTotales.get(i).getCodigo() == codigo){
                 return i;
@@ -154,10 +157,8 @@ public class Materia implements Serializable{
         return -1;
     }
 
+         /* Comprueba si un estudiante puede estar en un grupo, dependiendo de los cupos, creditos, prerrequisitos y disponibilidad*/
     public static boolean puedeVerMateria(Estudiante estudiante,Grupo grupo){
-        /*
-         * Comprueba si un estudiante puede estar en un grupo
-         */
         
         if (!(estudiante.getCreditos()+grupo.getMateria().getCreditos()<=Coordinador.getLimitesCreditos())){
             return false;
@@ -173,11 +174,10 @@ public class Materia implements Serializable{
         }
         return true;
     } 
-
+    
+       /*  Comprueba si un estudiante cumple los pre-requisitos de una materia identificadas por el codigo de la materia*/
     public static boolean comprobarPrerrequisitos(Estudiante estudiante,Materia materia){
-        /*
-         * Comprueba si un estudiante cumple los pre-requisitos de una materia
-         */
+        
         
         ArrayList<Materia> materiasVistas = new ArrayList<Materia>();
         
@@ -199,6 +199,8 @@ public class Materia implements Serializable{
         }
         return true;
     }
+    /* Metodo que separa el nombre de la materia entre las palabras que lo componen si tiene mas de 13 caracteres,
+     luego cada palabra queda con los 3 primero caracteres que se tengan*/
 
     public void hacerAbreviatura(String nombre){
         String abreviatura = "";
@@ -224,7 +226,7 @@ public class Materia implements Serializable{
             }
         }
     }
-    
+    /* Coloca en una lista los numeros de los grupos de una materia*/
     public String mostrarGrupos() {
     	String retorno = "";
     	int i = 1;
@@ -233,7 +235,7 @@ public class Materia implements Serializable{
     	}
     	return retorno;
     }
-    
+    /* Retorna la materia que se esta buscando */
     public static Materia encontrarMateria(String nombre) {
     	Materia mater = null;
     	for(Materia materia:Materia.getMateriasTotales()) {
@@ -243,7 +245,7 @@ public class Materia implements Serializable{
     	}
     	return mater;
     }
-    
+    /* Enumera todas las materias disponibles */
     public static String mostrarMaterias() {
     	String retorno = "";
     	int i = 1;
