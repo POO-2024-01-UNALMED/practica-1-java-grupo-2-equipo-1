@@ -1,4 +1,4 @@
-//Juan Diego Sanchez / Daniel Hernando Zambrano Gonzales/ David Posada / Juan Miguel Ochoa Agudelo
+//Juan Diego SanCHEZ / Daniel Hernando Zambrano Gonzales/ David Posada / Juan Miguel Ochoa Agudelo
 package gestorAplicacion.administracion;
 import java.io.Serializable;
 import java.util.ArrayList;
