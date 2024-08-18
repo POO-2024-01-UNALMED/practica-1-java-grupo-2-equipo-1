@@ -221,6 +221,9 @@ public class Main implements Interfaz{
                     }
                 }
                 break;
+                
+            //-------------------------------------------------------------------FUNCIONALIDAD 3-----------------------------------------------------------------------------------------------------------------//
+    
             case 3:
                 System.out.println("Has seleccionado la opcion 3 (Eliminar o agregar Materia / Grupo).");
                 System.out.println("Ingrese la opcion que se ajuste a su busqueda:\n1.Agregar Materia.       2.Eliminar Materia.\n3.Agregar Grupo.         4.Eliminar Grupo.\n5.Salir.");
