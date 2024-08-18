@@ -29,12 +29,14 @@ public class Main implements Interfaz{
         Boolean logueado = false;
         
         Usuario usuario = null;
+        
+        //primero pedimos mediante un escanner que el usuario ingrese a la plataforma
         while(!logueado) {
         	Scanner scanner2 = new Scanner(System.in);
         	System.out.println("\nSeleccione como desea ingresar a la plataforma:\n1. Crear nuevo usuario.\n2. Ingresar usuario existente.");
-        	int opcion_log = scanner.nextInt();
+        	int opcion_log = scanner.nextInt();      // ingresa
             scanner.nextLine();
-        	if (opcion_log==1) {
+        	if (opcion_log==1) {               //case 1
         		String nomb;
         		boolean existe;
         		boolean salir = false;
@@ -87,7 +89,8 @@ public class Main implements Interfaz{
         		logueado=true;
         		// scanner2.close();
         	}
-        	else if(opcion_log==2) {
+        	
+        	else if(opcion_log==2) {     // case 2
         		Scanner scanner3 = new Scanner(System.in);
         		boolean intentando = true;
         		while(intentando) {
