@@ -8,7 +8,7 @@ public class Grupo implements Serializable{
 	private Materia materia;
     private int numero;
     private Profesor profesor;
-    private ArrayList <String> horario; 
+    private ArrayList<String> horario; 
     private int cupos;
     private Salon salon;
     private ArrayList<Estudiante> estudiantes;
@@ -20,7 +20,7 @@ public class Grupo implements Serializable{
       this.profesor=profesor;
       this.horario=horario;
       this.cupos=cupos;
-      this.salon=salon;
+      this.salon=salon; 
       this.estudiantes=new ArrayList<Estudiante>();
 	  Grupo.gruposTotales.add(this);
     } 
@@ -28,7 +28,7 @@ public class Grupo implements Serializable{
 	public Grupo(Materia materia, int numero, Profesor profesor){
       this.materia = materia;
       this.numero=numero;
-      this.profesor=profesor; 
+      this.profesor=profesor;
 	  Grupo.gruposTotales.add(this);
     } 
 
