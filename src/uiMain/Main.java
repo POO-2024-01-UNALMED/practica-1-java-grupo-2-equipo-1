@@ -158,13 +158,17 @@ public class Main implements Interfaz{
             
             
             
+            //ACA VAMOS A APLICAR LAS FUNCIONALIDADES
+            
+            
             switch(opcion) {
-            //1
+            // -------------------------------------------------------FUNCIONALIDAD 1--------------------------------------------------------------------------------------------
             case 1:
                 System.out.println("Has seleccionado la opcion 1 (Matricular materia)");
                 Interfaz.matricularMateria();
                 break;
-            //2
+                // -------------------------------------------------------FUNCIONALIDAD 2--------------------------------------------------------------------------------------------
+
             case 2:
                 System.out.println("\nHas seleccionado la opcion 2 (Generar Horario).");
                 System.out.println("Esta Opcion te permitira generar una horario segun unas materias dadas.");
@@ -218,6 +222,10 @@ public class Main implements Interfaz{
                     }
                 }
                 break;
+                
+                
+                // -------------------------------------------------------FUNCIONALIDAD 3--------------------------------------------------------------------------------------------
+   
             case 3:
                 System.out.println("Has seleccionado la opcion 3 (Eliminar o agregar Materia / Grupo).");
                 System.out.println("Ingrese la opcion que se ajuste a su busqueda:\n1.Agregar Materia.       2.Eliminar Materia.\n3.Agregar Grupo.         4.Eliminar Grupo.\n5.Salir.");
@@ -663,6 +671,9 @@ public class Main implements Interfaz{
                     continue;
                 }
                 break;
+                
+                // -------------------------------------------------------FUNCIONALIDAD 4--------------------------------------------------------------------------------------------
+    
             case 4:
                 System.out.println("Has seleccionado la opcion 4 (Desmatricular Alumno).");
                 Estudiante estudiante = null;
@@ -796,6 +807,9 @@ public class Main implements Interfaz{
                 break;
            
             //
+                
+                // -------------------------------------------------------FUNCIONALIDAD 5--------------------------------------------------------------------------------------------
+    
             case 5:
             Coordinador e = (Coordinador) usuario;
             ArrayList<Estudiante> estudiantesBeneficiados = new ArrayList<Estudiante>();
@@ -947,7 +961,7 @@ public class Main implements Interfaz{
                     
                 }
                 break;
-
+           // GUARDAR Y SALIR
             case 6:
                 Serializador.serializarListas();
                 System.out.println("Has salido del programa");
