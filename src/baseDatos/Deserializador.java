@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-//Juan Diego Sanchez M / Daniel Hernando Zambrano Gonzales/ David Posada / Juan Miguel Ochoa Agudelo
-=======
 //Juan Diego Sanchez / Daniel Hernando Zambrano Gonzales/ David Posada Salazar/ Juan Miguel Ochoa Agudelo/ Sebastian Martinez Sequeira
->>>>>>> 36b178fecca636d393d4fdf317767b9bf18d0981
+
 package baseDatos;
 
 import java.io.File;
