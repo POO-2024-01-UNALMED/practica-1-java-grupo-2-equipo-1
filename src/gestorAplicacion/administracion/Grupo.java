@@ -8,7 +8,7 @@ public class Grupo implements Serializable{
 	private Materia materia;
     private int numero;
     private Profesor profesor;
-    private ArrayList<String> horario; 
+    private ArrayList <String> horario; 
     private int cupos;
     private Salon salon;
     private ArrayList<Estudiante> estudiantes;
