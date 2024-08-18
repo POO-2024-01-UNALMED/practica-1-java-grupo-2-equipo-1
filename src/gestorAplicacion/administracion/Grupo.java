@@ -23,7 +23,7 @@ public class Grupo implements Serializable{
       this.salon=salon;
       this.estudiantes=new ArrayList<Estudiante>();
 	  Grupo.gruposTotales.add(this);
-    }  
+    } 
     
 	public Grupo(Materia materia, int numero, Profesor profesor){
       this.materia = materia;
