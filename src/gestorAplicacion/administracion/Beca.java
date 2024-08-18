@@ -1,6 +1,4 @@
-//Gestiona la información relacionada con becas, incluyendo atributos específicos y una lista de todas las becas creadas.
-Ofrece métodos para manipular estas becas, como añadir nuevas y eliminar existentes, además de proporcionar acceso a la lista completa de becas.//
-
+//Juan Diego Sanchez / Daniel Hernando Zambrano Gonzales/ David Posada Salazar/ Juan Miguel Ochoa Agudelo/ Sebastian Martinez Sequeira
 package gestorAplicacion.administracion;
 import java.util.ArrayList;
 import java.io.Serializable;

@@ -1,7 +1,4 @@
-//* La clase Horario proporciona una estructura para gestionar horarios semanales, permitiendo asignar grupos a períodos específicos, 
-liberar esos períodos, comprobar la disponibilidad y mostrar el horario en un formato legible, también mantiene una lista de todos 
-los horarios creados y ofrece métodos para gestionar la disponibilidad y el contenido del horario//
-
+//Juan Diego Sanchez / Daniel Hernando Zambrano Gonzales/ David Posada Salazar/ Juan Miguel Ochoa Agudelo/ Sebastian Martinez Sequeira
 package gestorAplicacion.administracion;
 import java.io.Serializable;
 import java.util.ArrayList;

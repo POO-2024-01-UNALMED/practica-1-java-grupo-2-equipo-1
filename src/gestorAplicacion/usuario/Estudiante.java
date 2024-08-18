@@ -1,4 +1,4 @@
-//Juan Diego / Daniel Hernando Zambrano Gonzales/ David Posada / Juan Miguel Ochoa Agudelo
+//Juan Diego Sanchez / Daniel Hernando Zambrano Gonzales/ David Posada Salazar/ Juan Miguel Ochoa Agudelo/ Sebastian Martinez Sequeira
 package gestorAplicacion.usuario;
 
 import java.util.ArrayList;
@@ -122,7 +122,8 @@ public class Estudiante extends Usuario implements Serializable{
         this.notas.add(nota);
         this.calcularPromedio();
     }
-
+    
+    //METODO DE CLASE
     public static String mostrarEstudiantes(){
         String estudiantes = "";
         int i = 1;

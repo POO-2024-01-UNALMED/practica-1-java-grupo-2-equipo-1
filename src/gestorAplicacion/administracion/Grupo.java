@@ -20,7 +20,7 @@ public class Grupo implements Serializable{
       this.profesor=profesor;
       this.horario=horario;
       this.cupos=cupos;
-      this.salon=salon; 
+      this.salon=salon;
       this.estudiantes=new ArrayList<Estudiante>();
 	  Grupo.gruposTotales.add(this);
     } 
