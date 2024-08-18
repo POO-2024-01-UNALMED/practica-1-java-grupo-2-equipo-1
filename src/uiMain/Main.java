@@ -89,7 +89,7 @@ public class Main implements Interfaz{
         		logueado=true;
         		// scanner2.close();
         	}
-        	
+        	//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
         	else if(opcion_log==2) {     // case 2
         		Scanner scanner3 = new Scanner(System.in);
         		boolean intentando = true;
@@ -158,14 +158,16 @@ public class Main implements Interfaz{
             scanner.nextLine();
             
             
+            // EN ESTA PARTE MEDIANTE EL SWITCH VAMOS A APLICAR LAS FUNCIONALIDADES
             
             switch(opcion) {
-            //1
+            //-------------------------------------------------------------------FUNCIONALIDAD 1-----------------------------------------------------------------------------------------------------------------//
             case 1:
                 System.out.println("Has seleccionado la opcion 1 (Matricular materia)");
                 Interfaz.matricularMateria();
                 break;
-            //2
+             //-------------------------------------------------------------------FUNCIONALIDAD 2-----------------------------------------------------------------------------------------------------------------//
+
             case 2:
                 System.out.println("\nHas seleccionado la opcion 2 (Generar Horario).");
                 System.out.println("Esta Opcion te permitira generar una horario segun unas materias dadas.");
