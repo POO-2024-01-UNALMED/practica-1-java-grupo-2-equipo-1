@@ -25,7 +25,7 @@ public class Grupo implements Serializable{
       this.estudiantes=new ArrayList<Estudiante>();
 	  Grupo.gruposTotales.add(this);
     }  
-    
+    // constructores
 	public Grupo(Materia materia, int numero, Profesor profesor){
       this.materia = materia;
       this.numero=numero;
@@ -62,7 +62,7 @@ public class Grupo implements Serializable{
 			this.estudiantes.remove(indice);
 		}
     }
-
+	
 	public static Grupo buscarGrupo(Materia materiaE, Grupo grupoE){
 		int indicei = -1;
 		int indicej = -1;
