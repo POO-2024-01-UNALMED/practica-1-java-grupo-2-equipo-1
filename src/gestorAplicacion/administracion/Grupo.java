@@ -28,7 +28,7 @@ public class Grupo implements Serializable{
 	public Grupo(Materia materia, int numero, Profesor profesor){
       this.materia = materia;
       this.numero=numero;
-      this.profesor=profesor;
+      this.profesor=profesor; 
 	  Grupo.gruposTotales.add(this);
     } 
 
