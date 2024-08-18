@@ -669,6 +669,10 @@ public class Main implements Interfaz{
                     continue;
                 }
                 break;
+                
+              //-------------------------------------------------------------------FUNCIONALIDAD 4----------------------------------------------------------------------------------------------------------------//
+    
+                
             case 4:
                 System.out.println("Has seleccionado la opcion 4 (Desmatricular Alumno).");
                 Estudiante estudiante = null;
@@ -802,6 +806,10 @@ public class Main implements Interfaz{
                 break;
            
             //
+                
+                
+           //-------------------------------------------------------------------FUNCIONALIDAD 5-----------------------------------------------------------------------------------------------------------------//
+    
             case 5:
             Coordinador e = (Coordinador) usuario;
             ArrayList<Estudiante> estudiantesBeneficiados = new ArrayList<Estudiante>();
